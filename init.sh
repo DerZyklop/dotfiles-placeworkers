@@ -5,6 +5,9 @@ echo "${red}#####################################################"
 read -p "${green}Should i?${reset} [yN] " -n 1 -r
 echo "\nAllright!"
 
+sudo chown -R $(whoami) /usr/local
+sudo chown -R $(whoami) /Library/Caches/Homebrew/
+
 if [[ $REPLY =~ ^[Yy]$ ]]; then
 	for file in ~/.{aliases,bash_prompt,exports,functions,path,profile,gitconfig,extra}; do
 		echo "${red}#####################################################"
