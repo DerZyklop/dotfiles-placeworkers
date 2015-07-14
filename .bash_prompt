@@ -87,9 +87,9 @@ PS1+="\[${userStyle}\]\u"; # username
 PS1+="\[$(tput setaf 236)\] @ ";
 PS1+="\[${hostStyle}\]\h"; # host
 
-if ifconfig | grep -q tun0; then
+if ifconfig | grep -q ^tun0; then
   PS1+="\[${green}\] OpenVPN ✓${reset}"; # host
-elif ifconfig | grep -q ppp0; then
+elif ifconfig | grep -q ^ppp0; then
   PS1+="\[${green}\] PPTP ✓${reset}"; # host
 fi
 
