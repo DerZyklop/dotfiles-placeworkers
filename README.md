@@ -1,4 +1,4 @@
-# Repo deprecated
+# 🚫 Repo deprecated❗️
 
 Dont use this repository!
 
